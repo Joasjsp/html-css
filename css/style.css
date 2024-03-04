@@ -1,0 +1,207 @@
+@charset "UTF8";
+@font-face{
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+/* 
+
+
+*/
+/* //////TUDO QUE É DEFINITO N :RROT SER PARA O DOCUMENTO INTEIRO/////
+--cor0   : PARA DECLAR VARIAVEL NO CSS: TEM QUE SER NO ROOT E USAR DOS TRAÇOS
+*/
+/*VARIAVEIS*/
+:root{
+    --cor0: #c5ebd6;  /*VARIÁVEL*/
+    --cor1: #83e1ad;  /*VARIÁVEL*/
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --COR5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-android:'Android';
+}
+
+/* CONFIGURAÇOES GLOBAIS FICA DENTRO *{  }  TODOS SEGUEM ESSE PADRÃO*/ 
+/*CONFIGURAÇÕES GLOBAIS*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+/*ADICIONA ICONE NO LINK EXTERNO - DEFIFINIDA COMO CLASS EXTENO*/
+a.externo::after{
+    content: '\00A0\1F517'; 
+}
+
+/*CABEÇALHO*/
+header{
+    background-image: linear-gradient(to bottom,var(--cor3), var(--COR5));
+    min-height: 150pix;
+    text-align: center; /* CENTRALIZAR*/
+    padding-top: 40px;/*MARGE SUPERIOR NO H1*/
+    font-weight: normal; /* TIRAR O NEGRITO*/
+}
+
+header h1{
+
+    color: white;
+    font-family: var(--fonte-padrao);
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);/*SOMBRA NO TEXTO*/
+}
+
+header > p {
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+}
+
+/*MENU*/
+nav{
+    background-color: var(--COR5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.267);/*ADICIONA SOMBRA*/
+}
+
+nav a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;/*PARA PERDER O SUMBLINHADO*/
+}
+
+nav a:hover{
+    background-color: var(--COR5);
+
+}
+/*CORPO SITE*/
+main{
+    min-width: 200px; /* LARGURA MINIMA*/
+    max-width: 1000px; /* LARGURA MAXIMA*/
+    margin: auto; /* CENTRALIZA NO MEIO O MAIN QUANDO AUMENTA O TAMANHO DA TELA*/
+    margin-bottom: 30px; /*MARGEM NO RODAPÉ*/
+    padding: 20px; 
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* SOMBRA PADDING*/
+    border-bottom-left-radius: 10px; /* PARA AREDONDAR A BORDA DE BAIXO da esquerda*/
+    border-bottom-right-radius: 10px;/* PARA ARREDONDAR A BORDA DE BAIXO DA DIREITA*/
+}
+
+/* configuração do VIDEO*/
+div.video {
+    background-color: var(--COR5);
+    margin-bottom: 30px;
+    padding-bottom: 58%;
+    position: relative;
+
+}
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+/* CONFIGURAÇÃO DOS PARAGRAFOS*/
+main p {
+    margin: 15px 0px 15px 0px;
+    text-align: justify; /* JUSTIFICAR O TEXTO*/
+    text-indent: 30px; /*PARA ADICIONAR PARAGRAFO*/
+    font-size: 1.1em; /* fonte do texto*/
+    line-height: 2em; /* ESPAÇO ENTRE LINHAS*/
+}
+
+
+main strong{
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+main a {
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+
+main a:hover {
+    text-decoration:underline ;
+    color: var(--cor4);
+}
+
+main h1{
+    color: #1a5c37;
+    font-family: var(--fonte-android);
+}
+
+main h2{
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    background-image: linear-gradient(to right, var(--cor1), transparent); /* DEGRADE: nosso começa mais forte e fica tranparente */
+    font-size: 1.3em;
+    text-indent: 8px; /* RECUAR O TEXTO*/
+}
+
+main img{
+    width: 100%; /* LARGURA DAS IMAGENS*/
+}
+
+main img.pequena{
+    max-width: 350px; /* LARGURA MAXIMA DAS IMAGENS PEQUENAS */
+    display: block; /* PARA CENTRALIZAR A IMAGEM*/
+    margin: auto;
+}
+
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.267) ; /*SOMBRA*/
+}
+aside > ul {
+    list-style-position: inside; 
+    columns: 2; /* QUANTIDADE DE COLUNAS*/
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 5px;
+    margin: -010px -010px 0px -010px; /* ALERAR A MAGEM TODAS AS MAR GENS*/
+    border-radius: 10px 10px 0px 0px; /* ALTERA TODAS AS MARGENS* - DIREITA ESQUERDA ENCIMA e DIREITA ESQUERDA EM BAIX/*/
+}
+
+/*RODAPÉ
+footer{
+    background-color: var(--COR5);
+    color: white;
+}*/
+/*RODAPÉ*/
+footer{
+    background-image: linear-gradient(to bottom,var(--cor3), var(--COR5));
+    text-align: center; /* CENTRALIZAR*/
+    padding: 5px;
+    color: white;
+    font-size: 0.8em;
+}
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
+}
